@@ -380,7 +380,7 @@ body {
     top: 0;
     z-index: 10;
     height: 4rem;
-    width: 100%;
+    width: 90%;
     transition: background-color 0.3s ease;
   }
 
