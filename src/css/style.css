@@ -409,7 +409,7 @@ body {
     display: flex;
   }
   .nav__links {
-    margin-left: 0.5rem;
+    margin-left: 2rem;
     align-items: center;
     max-width: 100%;
     display: flex;
