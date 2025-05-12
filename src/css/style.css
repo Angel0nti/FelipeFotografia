@@ -409,6 +409,7 @@ body {
     display: flex;
   }
   .nav__links {
+    max-width: 90%;
     display: flex;
     list-style: none;
   }
