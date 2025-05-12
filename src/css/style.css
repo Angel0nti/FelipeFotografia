@@ -409,6 +409,8 @@ body {
     display: flex;
   }
   .nav__links {
+    margin-left: 0.5rem;
+    align-items: center;
     max-width: 100%;
     display: flex;
     list-style: none;
