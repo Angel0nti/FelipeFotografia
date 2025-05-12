@@ -89,15 +89,13 @@ let currentSlides = [];
 
 const sliderData = {
   weddings: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/bodas/boda${n}`
+    n => `/img/bodas/boda${n}`
   ),
-  exteriores: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/xv/xv${n}`
-  ),
+  exteriores: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `/img/xv/xv${n}`),
   graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/grad/graduacion${n}`
+    n => `/img/grad/graduacion${n}`
   ),
-  retratos: ['1.jpg', '2.jpg', '3.jpg'].map(n => `src/img/estudio/est${n}`),
+  retratos: ['1.jpg', '2.jpg', '3.jpg'].map(n => `/img/estudio/est${n}`),
 };
 
 const renderSlides = images => {
@@ -149,7 +147,7 @@ let currEventSlideArr = [];
 
 const sliderEventData = {
   valentin: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    numImage => `src/img/eventos/event${numImage}`
+    numImage => `/img/eventos/event${numImage}`
   ),
 };
 
