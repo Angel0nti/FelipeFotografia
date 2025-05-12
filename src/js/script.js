@@ -2,7 +2,7 @@
 
 // -------------STICKY NAVIGATION---------------- //
 const nav = document.querySelector('.nav');
-const header = document.querySelector('.hero'); // o la sección justo debajo del nav
+const header = document.querySelector('.nav-container'); // o la sección justo debajo del nav
 
 const navHeight = nav.getBoundingClientRect().height;
 
