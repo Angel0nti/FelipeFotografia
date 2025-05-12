@@ -24,7 +24,7 @@ const obs = new IntersectionObserver(
   }
 );
 
-obs.observe(header);
+obs.observe(navContainer);
 
 // ----------- INTERSECTION OBSERVER API  REVEALING ELEMENTS STARTS -------------
 
