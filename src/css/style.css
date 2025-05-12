@@ -409,10 +409,10 @@ body {
     display: flex;
   }
   .nav__links {
-    max-width: 95%;
+    max-width: 90%;
     display: flex;
     list-style: none;
-    gap: 1;
+    gap: 1rem;
   }
 
   .nav__link:link,
