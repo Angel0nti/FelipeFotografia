@@ -2,22 +2,29 @@
 
 // -------------STICKY NAVIGATION---------------- //
 const nav = document.querySelector('.nav');
-const header = document.querySelector('.hero');
+const header = document.querySelector('.hero'); // o la sección justo debajo del nav
+
 const navHeight = nav.getBoundingClientRect().height;
 
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-};
+const obs = new IntersectionObserver(
+  function (entries) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) {
+      nav.classList.add('sticky');
+      header.style.marginTop = `${navHeight}px`;
+    } else {
+      nav.classList.remove('sticky');
+      header.style.marginTop = `0`;
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+  }
+);
 
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
-});
-
-headerObserver.observe(header);
+obs.observe(header);
 
 // ----------- INTERSECTION OBSERVER API  REVEALING ELEMENTS STARTS -------------
 
