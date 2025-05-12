@@ -412,7 +412,7 @@ body {
     max-width: 90%;
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .nav__link:link,
