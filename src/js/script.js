@@ -2,7 +2,7 @@
 
 // -------------STICKY NAVIGATION---------------- //
 const nav = document.querySelector('.nav');
-const header = document.querySelector('.nav-container'); // o la sección justo debajo del nav
+const navContainer = document.querySelector('.nav-container');
 
 const navHeight = nav.getBoundingClientRect().height;
 
@@ -11,10 +11,10 @@ const obs = new IntersectionObserver(
     const [entry] = entries;
     if (!entry.isIntersecting) {
       nav.classList.add('sticky');
-      header.style.marginTop = `${navHeight}px`;
+      navContainer.style.marginTop = `${navHeight}px`;
     } else {
       nav.classList.remove('sticky');
-      header.style.marginTop = `0`;
+      navContainer.style.marginTop = `0`;
     }
   },
   {
