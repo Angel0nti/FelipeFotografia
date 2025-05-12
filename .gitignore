@@ -1,4 +1,4 @@
-node_modules
-.parcel-cache
 dist
-.gitignore
+.parcel-cache
+node_modules
+.prettierrc
