@@ -99,10 +99,10 @@ const sliderData = {
     n => `src/img/bodas/boda${n}`
   ),
   exteriores: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/xv/xv${n}`
+    n => `src/img/ext/ext${n}`
   ),
   graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/grad/graduacion${n}`
+    n => `src/img/grad/grad${n}`
   ),
   retratos: ['1.jpg', '2.jpg', '3.jpg'].map(n => `src/img/estudio/est${n}`),
 };
@@ -155,9 +155,17 @@ let currEventSlide = 0;
 let currEventSlideArr = [];
 
 const sliderEventData = {
-  valentin: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    numImage => `src/img/eventos/event${numImage}`
-  ),
+  eventos: [
+    '1.jpg',
+    '2.jpg',
+    '3.jpg',
+    '4.jpg',
+    '5.jpg',
+    '6.jpg',
+    // '7.jpg',
+    // '8.jpg',
+    // '9.jpg',
+  ].map(numImage => `src/img/eventos/event${numImage}`),
 };
 
 const renderEventSlides = images => {
@@ -183,7 +191,7 @@ const moveToEventSlide = index => {
     });
 };
 
-renderEventSlides(sliderEventData.valentin);
+renderEventSlides(sliderEventData.eventos);
 
 setInterval(() => {
   if (currEventSlideArr.length === 0) return;
