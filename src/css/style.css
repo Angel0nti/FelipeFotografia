@@ -454,6 +454,11 @@ body {
     display: none;
   }
   .nav__links-ham {
+    border: 1px solid red;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    display: flex;
     list-style: none;
   }
 }
