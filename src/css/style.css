@@ -453,15 +453,8 @@ body {
   .nav__links {
     display: none;
   }
-  .nav__item {
+  .nav__links-ham {
     list-style: none;
-  }
-  .nav__link:link,
-  .nav__link:visited {
-    font-size: 1rem;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
   }
 }
 
