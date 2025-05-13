@@ -453,8 +453,12 @@ body {
   .nav__links {
     display: none;
   }
-  .sticky {
-    /* width: 100%; */
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
   }
 }
 
