@@ -10,12 +10,28 @@
   </head>
   <body>
     <header class="nav">
+      <div class="off-screen-menu">
+        <ul>
+          <li class="nav__item">
+            <a class="nav__link" href="#sesiones">Sesiones</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#eventos">Eventos Especiales</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about-me">Acerca de mí</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
       <nav class="nav-container">
-        <button class="nav__toggle" aria-label="Abrir menu">
-          <svg class="nav__icon" aria-hidden="true">
-            <use xlink:href="src/img/icon/icon.svg#hamburger-icon"></use>
-          </svg>
-        </button>
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <img
           src="src/img/logo/Logo_estudio_invertido.jpg"
           alt="Logo de Felipe Ontiveros"
