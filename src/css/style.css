@@ -462,13 +462,13 @@ body {
     margin-bottom: 0;
     padding: 2rem;
     max-width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .slides-container {
     max-width: 100%;
     margin: 0;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
   .slider-controls {
     padding: 0;
@@ -476,7 +476,7 @@ body {
   }
   .slide > img {
     width: 100%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin: 0;
     object-fit: contain;
   }
