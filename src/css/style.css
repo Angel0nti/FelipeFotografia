@@ -453,11 +453,16 @@ body {
   .nav__links {
     display: none;
   }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1rem;
+  }
   .nav__links-ham {
     text-decoration: none;
     list-style: none;
     margin: 0;
     display: flex;
+    flex-direction: column;
     list-style: none;
   }
 }
