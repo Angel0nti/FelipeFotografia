@@ -376,7 +376,7 @@ body {
   font-size: 1.5rem;
 }
 
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .nav {
     top: 0;
     z-index: 10;
@@ -432,7 +432,7 @@ body {
 /* ======================================
    HERO SECTION MEDIA QUERY
 ====================================== */
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .hero {
     position: relative;
     overflow: hidden;
@@ -457,7 +457,7 @@ body {
    SLIDER SECTION MEDIA QUERIES
 ====================================== */
 
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .slide-section {
     margin-bottom: 0;
     padding: 2rem;
@@ -521,7 +521,7 @@ body {
    ACERCA DE MI SECTION MEDIA QUERY
 ====================================== */
 
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .acerca-de-container {
     display: flex;
     flex-direction: column;
@@ -565,7 +565,7 @@ body {
 /* ======================================
    EVENTOS SECTION
 ====================================== */
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .slide-event-section {
     margin: 0;
     padding: 0;
@@ -627,7 +627,7 @@ body {
 /* ======================================
    SECTION  QUERIES
 ====================================== */
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .section {
     max-width: 100%;
     margin-bottom: 0;
