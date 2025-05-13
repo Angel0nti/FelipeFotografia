@@ -47,20 +47,26 @@ body {
 .nav {
   top: 0;
   z-index: 10;
-  max-height: 6rem;
-  min-height: 3rem;
-  width: 100%;
+  max-width: 100%;
   background-color: black;
   transition: background-color 0.3s ease;
 }
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: black;
+.nav__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
 }
+.nav__icon {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+/* .sticky {
+  position: fixed;
+  max-width: 100%;
+  background-color: black;
+} */
 
 .nav-container {
   max-width: 100%;
@@ -81,7 +87,7 @@ body {
 .nav__links {
   display: flex;
   list-style: none;
-  gap: 2.2rem;
+  gap: 2rem;
 }
 
 .nav__link:link,
@@ -376,69 +382,39 @@ body {
   font-size: 1.5rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .nav {
-    top: 0;
-    z-index: 10;
-    height: 4rem;
-    transition: background-color 0.3s ease;
+@media (max-device-width: 768px) {
+  .nav__toggle {
+    display: block;
   }
-
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .nav-container {
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.9rem;
-  }
-
   .nav__logo {
-    max-width: 100px;
-    height: auto;
-  }
-  .nav__item {
+    margin: 0 auto;
+    width: 50%;
     align-items: center;
     display: flex;
   }
   .nav__links {
-    margin-left: 2rem;
-    align-items: center;
-    max-width: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    padding: 1rem;
+  }
+  .nav__list--open {
     display: flex;
-    list-style: none;
-    gap: 1.5rem;
-  }
-
-  .nav__link:link,
-  .nav__link:visited {
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .nav__link:hover {
-    color: var(--nav-item-color-hover);
   }
 }
 
 /* ======================================
    HERO SECTION MEDIA QUERY
 ====================================== */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media (max-device-width: 768px) {
   .hero {
     position: relative;
     overflow: hidden;
     height: 100%;
   }
-
   .hero img {
     width: 100%;
     height: 100%;
@@ -448,6 +424,7 @@ body {
 
   .content-title {
     font-size: 1rem;
+    margin: 0 auto;
     text-align: center;
     z-index: 10;
   }
@@ -457,18 +434,16 @@ body {
    SLIDER SECTION MEDIA QUERIES
 ====================================== */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media (max-device-width: 768px) {
   .slide-section {
     margin-bottom: 0;
     padding: 2rem;
     max-width: 100%;
-    /* border: 1px solid red; */
   }
 
   .slides-container {
     max-width: 100%;
     margin: 0;
-    /* border: 1px solid blue; */
   }
   .slider-controls {
     padding: 0;
@@ -476,7 +451,6 @@ body {
   }
   .slide > img {
     width: 100%;
-    /* border: 1px solid green; */
     margin: 0;
     object-fit: contain;
   }
@@ -521,7 +495,7 @@ body {
    ACERCA DE MI SECTION MEDIA QUERY
 ====================================== */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media (max-device-width: 768px) {
   .acerca-de-container {
     display: flex;
     flex-direction: column;
@@ -565,7 +539,7 @@ body {
 /* ======================================
    EVENTOS SECTION
 ====================================== */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media (max-device-width: 768px) {
   .slide-event-section {
     margin: 0;
     padding: 0;
@@ -627,7 +601,7 @@ body {
 /* ======================================
    SECTION  QUERIES
 ====================================== */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media (max-device-width: 768px) {
   .section {
     max-width: 100%;
     margin-bottom: 0;

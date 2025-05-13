@@ -1,30 +1,30 @@
 'use strict';
 
-// -------------STICKY NAVIGATION---------------- //
-const nav = document.querySelector('.nav');
-const header = document.querySelector('.hero');
+// // -------------STICKY NAVIGATION---------------- //
+// const nav = document.querySelector('.nav');
+// const header = document.querySelector('.hero');
 
-const navHeight = nav.getBoundingClientRect().height;
+// const navHeight = nav.getBoundingClientRect().height;
 
-const obs = new IntersectionObserver(
-  function (entries) {
-    const [entry] = entries;
-    if (!entry.isIntersecting) {
-      nav.classList.add('sticky');
-      header.style.marginTop = `${navHeight}px`;
-    } else {
-      nav.classList.remove('sticky');
-      header.style.marginTop = `0`;
-    }
-  },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  }
-);
+// const obs = new IntersectionObserver(
+//   function (entries) {
+//     const [entry] = entries;
+//     if (!entry.isIntersecting) {
+//       nav.classList.add('sticky');
+//       header.style.marginTop = `${navHeight}px`;
+//     } else {
+//       nav.classList.remove('sticky');
+//       header.style.marginTop = `0`;
+//     }
+//   },
+//   {
+//     root: null,
+//     threshold: 0,
+//     rootMargin: `-${navHeight}px`,
+//   }
+// );
 
-obs.observe(header);
+// obs.observe(header);
 
 // ----------- INTERSECTION OBSERVER API  REVEALING ELEMENTS STARTS -------------
 
@@ -198,3 +198,11 @@ setInterval(() => {
   currEventSlide = (currEventSlide + 1) % currEventSlideArr.length;
   moveToEventSlide(currEventSlide);
 }, 3000);
+
+// ------------------- HAMBURGER BUTTON -------------------
+const btnToggle = document.querySelector('.nav__toggle');
+const navLinksHam = document.querySelector('.nav__links');
+
+btnToggle.addEventListener('click', () => {
+  navLinksHam.classList.toggle('.nav__list--open');
+});
