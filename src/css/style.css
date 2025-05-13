@@ -453,6 +453,9 @@ body {
   .nav__links {
     display: none;
   }
+  .nav__item {
+    list-style: none;
+  }
   .nav__link:link,
   .nav__link:visited {
     font-size: 1rem;
