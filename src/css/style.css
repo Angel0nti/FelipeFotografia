@@ -115,6 +115,8 @@ body {
    HERO SECTION
 ====================================== */
 .hero {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   border-bottom: 1px solid gray;
   position: relative;
   overflow: hidden;
@@ -472,6 +474,8 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .hero {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
     position: relative;
     overflow: hidden;
     height: 100%;
