@@ -203,7 +203,16 @@ setInterval(() => {
 const hamMenu = document.querySelector('.ham-menu');
 const offsScreenMenu = document.querySelector('.off-screen-menu');
 
-hamMenu.addEventListener('click', () => {
+hamMenu.addEventListener('click', event => {
+  event.stopPropagation();
   hamMenu.classList.toggle('active');
   offsScreenMenu.classList.toggle('active');
+});
+offsScreenMenu.addEventListener('click', event => {
+  event.stopPropagation();
+});
+
+document.addEventListener('click', () => {
+  hamMenu.classList.remove('active');
+  offsScreenMenu.classList.remove('active');
 });
