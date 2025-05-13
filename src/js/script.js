@@ -197,7 +197,7 @@ setInterval(() => {
   if (currEventSlideArr.length === 0) return;
   currEventSlide = (currEventSlide + 1) % currEventSlideArr.length;
   moveToEventSlide(currEventSlide);
-}, 3000);
+}, 1500);
 
 // ------------------- HAMBURGER BUTTON -------------------
 const hamMenu = document.querySelector('.ham-menu');
