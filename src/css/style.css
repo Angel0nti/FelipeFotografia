@@ -818,7 +818,7 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .footer {
-    margin-top: 3rem;
+    margin-top: 6rem;
     height: 50%;
     background-color: var(--background);
     display: flex;
