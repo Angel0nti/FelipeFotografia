@@ -673,9 +673,9 @@ body {
     margin: 0;
     text-align: center;
     align-items: center;
-    max-width: 50%;
-    padding: 1rem 2rem;
-    font-size: 0.8rem;
+    max-width: 45%;
+    padding: 0.9rem 1.93rem;
+    font-size: 0.75rem;
     background-color: var(--background);
     color: var(--slider-btns-color);
     border: 1px solid white;
