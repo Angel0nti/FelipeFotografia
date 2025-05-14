@@ -33,12 +33,12 @@ body {
 .section {
   max-width: 100%;
   width: 100%;
-  transition: all 1s ease-out;
+  transition: all 0.8s linear;
 }
 
 .section--hidden {
   opacity: 0;
-  transform: translateY(10rem);
+  transform: translateY(5rem);
 }
 
 /* ======================================
@@ -73,6 +73,8 @@ body {
   width: 100%;
   min-width: 100%;
   background-color: black;
+  animation: slideDown 0.9s linear;
+  z-index: 999;
 }
 
 .nav-container {
@@ -508,9 +510,12 @@ body {
 }
 
 /* ======================================
-   FOOTER STARTS
+   FOOTER ENDS
 ====================================== */
 
+/* ======================================
+   ANIMATIONS STARTS
+====================================== */
 @keyframes slideIn {
   from {
     transform: translateY(-100%);
@@ -519,7 +524,20 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+/* ======================================
+   ANIMATIONS ENDS
+====================================== */
 @media (max-width: 768px) {
   .off-screen-menu.active {
     max-height: 30%;
