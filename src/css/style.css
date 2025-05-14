@@ -33,7 +33,6 @@ body {
 .section {
   max-width: 100%;
   width: 100%;
-  margin-bottom: 15rem;
 }
 
 .section--hidden {
@@ -53,8 +52,8 @@ body {
 }
 .off-screen-menu {
   background-color: black;
-  height: 40%;
-  width: 40%;
+  height: 30%;
+  width: 25%;
   max-width: 450px;
   position: fixed;
   top: 0;
@@ -86,9 +85,12 @@ body {
 }
 
 .nav__logo {
-  width: 30%;
-  height: 5rem;
+  width: 25%;
+  height: 6rem;
   background-color: black;
+  margin-right: 25rem;
+  margin-left: 15rem;
+  padding: 0;
 }
 
 .nav__links {
@@ -115,18 +117,19 @@ body {
    HERO SECTION
 ====================================== */
 .hero {
-  margin-top: 3rem;
+  margin-top: 0;
+  background-color: var(--background);
   margin-bottom: 4rem;
   border-bottom: 1px solid gray;
   position: relative;
   overflow: hidden;
-  max-width: 100%;
-  max-height: 70rem;
+  max-height: 90rem;
 }
 
 .hero img {
+  margin-top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -357,7 +360,7 @@ body {
 .slide-event {
   border-radius: 2rem;
   position: absolute;
-  margin-top: 10rem;
+  margin-top: 12rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -518,12 +521,15 @@ body {
 
 @media (max-width: 768px) {
   .off-screen-menu.active {
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 25%;
     padding: 1rem;
     z-index: 200;
     right: 0;
   }
+
   .ham-menu {
+    border-radius: 50%;
     z-index: 2000;
     height: 3rem;
     width: 3rem;
@@ -551,14 +557,14 @@ body {
 
   .ham-menu.active span:nth-child(1) {
     top: 40%;
-    transform: translate(-50%, -55%) rotate(-45deg);
+    transform: translate(-50%, 50%) rotate(-45deg);
   }
   .ham-menu.active span:nth-child(2) {
     opacity: 0;
   }
   .ham-menu.active span:nth-child(3) {
     top: 40%;
-    transform: translate(-50%, 55%) rotate(45deg);
+    transform: translate(-50%, 50%) rotate(45deg);
   }
   .nav__logo {
     margin: 0 auto;
@@ -571,7 +577,7 @@ body {
   }
   .nav__link:link,
   .nav__link:visited {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .nav__links-ham {
     text-decoration: none;
@@ -602,7 +608,7 @@ body {
   }
 
   .content-title {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0 auto;
     text-align: center;
     z-index: 10;
@@ -629,11 +635,10 @@ body {
   .slides-container {
     gap: 0.5rem;
     max-width: 100%;
-    margin-top: 2.4rem;
+    margin-top: 5rem;
   }
   .slider-controls {
-    padding: 0;
-    margin: 0;
+    padding: 0 2rem;
   }
   .slide > img {
     width: 100%;
@@ -641,14 +646,18 @@ body {
     object-fit: contain;
   }
   .slider__btn {
-    height: 2.6rem;
-    width: 2.6rem;
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2.2rem;
   }
   .slider__btn--left {
     left: 3%;
     opacity: 0.5;
-    transform: translate(-10%, -100%);
+    transform: translate(-10%, 50%);
   }
   .slider__btn--left:active {
     opacity: 1;
@@ -657,20 +666,21 @@ body {
   .slider__btn--right {
     right: 3%;
     opacity: 0.5;
-    transform: translate(10%, -100%);
+    transform: translate(10%, 50%);
   }
 
   .btn-image-slide {
     margin: 0;
     text-align: center;
-    max-width: 5rem;
-    padding: 0.8rem 0.7rem;
-    font-size: 0.6rem;
+    align-items: center;
+    max-width: 50%;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
     background-color: var(--background);
     color: var(--slider-btns-color);
     border: 1px solid white;
     overflow: hidden;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
   }
 
   .btn-image-slide:hover {
