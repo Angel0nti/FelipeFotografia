@@ -73,7 +73,7 @@ body {
   width: 100%;
   min-width: 100%;
   background-color: black;
-  animation: slideDown 0.9s linear;
+  animation: slideDown 0.3s linear;
   z-index: 999;
 }
 
@@ -120,6 +120,7 @@ body {
    HERO SECTION
 ====================================== */
 .hero {
+  transition: none; /* O controla bien el estado */
   margin-top: 0;
   background-color: var(--background);
   margin-bottom: 4rem;
@@ -130,6 +131,7 @@ body {
 }
 
 .hero img {
+  transition: none; /* O controla bien el estado */
   margin-top: 0;
   width: 100%;
   height: 100%;
