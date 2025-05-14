@@ -639,7 +639,6 @@ body {
   }
   .slider-controls {
     padding: 0;
-    border: 1px solid red;
   }
   .slide > img {
     width: 100%;
@@ -658,7 +657,7 @@ body {
   .slider__btn--left {
     left: 3%;
     opacity: 0.5;
-    transform: translate(-10%, 50%);
+    transform: translate(-10%, 10%);
   }
   .slider__btn--left:active {
     opacity: 1;
@@ -667,7 +666,7 @@ body {
   .slider__btn--right {
     right: 3%;
     opacity: 0.5;
-    transform: translate(10%, 50%);
+    transform: translate(10%, 10%);
   }
 
   .btn-image-slide {
