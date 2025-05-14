@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Felipe Ontiveros Photography Web Page",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir ./dist"
   },
   "author": "Angel Ontiveros",
   "license": "ISC",
@@ -12,6 +12,8 @@
     "install": "^0.13.0",
     "npm": "^11.3.0",
     "parcel": "^2.14.4",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "serve": "^14.2.4"
   },
   "dependencies": {

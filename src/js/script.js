@@ -1,5 +1,4 @@
 'use strict';
-
 // // -------------STICKY NAVIGATION---------------- //
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.hero');
@@ -95,16 +94,10 @@ let currentSlide = 0;
 let currentSlides = [];
 
 const sliderData = {
-  weddings: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/bodas/boda${n}`
-  ),
-  exteriores: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/ext/ext${n}`
-  ),
-  graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(
-    n => `src/img/grad/grad${n}`
-  ),
-  retratos: ['1.jpg', '2.jpg', '3.jpg'].map(n => `src/img/estudio/est${n}`),
+  weddings: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `bodas/boda${n}`),
+  exteriores: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `ext/ext${n}`),
+  graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `grad/grad${n}`),
+  retratos: ['1.jpg', '2.jpg', '3.jpg'].map(n => `estudio/est${n}`),
 };
 
 const renderSlides = images => {
@@ -165,7 +158,7 @@ const sliderEventData = {
     // '7.jpg',
     // '8.jpg',
     // '9.jpg',
-  ].map(numImage => `src/img/eventos/event${numImage}`),
+  ].map(numImage => `eventos/event${numImage}`),
 };
 
 const renderEventSlides = images => {
