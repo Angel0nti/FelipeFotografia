@@ -5,15 +5,23 @@ const header = document.querySelector('.hero');
 
 const navHeight = nav.getBoundingClientRect().height;
 
+let isSticky = false;
+
 const obs = new IntersectionObserver(
   function (entries) {
     const [entry] = entries;
     if (!entry.isIntersecting) {
-      nav.classList.add('sticky');
-      header.style.marginTop = `${navHeight}px`;
+      if (!isSticky) {
+        nav.classList.add('sticky');
+        header.style.marginTop = `${navHeight}px`;
+        isSticky = true;
+      }
     } else {
-      nav.classList.remove('sticky');
-      header.style.marginTop = `0`;
+      if (isSticky) {
+        nav.classList.remove('sticky');
+        header.style.marginTop = `0`;
+        isSticky = false;
+      }
     }
   },
   {
@@ -32,6 +40,7 @@ const allSections = document.querySelectorAll('.section');
 const revealSection = function (entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting === false) return;
+
     entry.target.classList.remove('section--hidden');
 
     observer.unobserve(entry.target);
@@ -40,7 +49,7 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.3,
+  threshold: 0.5,
 });
 
 allSections.forEach(function (section) {
