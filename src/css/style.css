@@ -638,7 +638,8 @@ body {
     margin-top: 5rem;
   }
   .slider-controls {
-    padding: 0 2rem;
+    padding: 0;
+    border: 1px solid red;
   }
   .slide > img {
     width: 100%;
@@ -674,7 +675,7 @@ body {
     text-align: center;
     align-items: center;
     max-width: 45%;
-    padding: 0.9rem 1.93rem;
+    padding: 0.9rem 1.3rem;
     font-size: 0.75rem;
     background-color: var(--background);
     color: var(--slider-btns-color);
