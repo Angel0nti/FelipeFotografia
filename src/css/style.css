@@ -33,11 +33,12 @@ body {
 .section {
   max-width: 100%;
   width: 100%;
+  transition: all 1s ease-out;
 }
 
 .section--hidden {
   opacity: 0;
-  transform: translateY(5rem);
+  transform: translateY(10rem);
 }
 
 /* ======================================
