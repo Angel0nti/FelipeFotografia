@@ -587,6 +587,7 @@ body {
     transform: translate(-50%, 50%) rotate(45deg);
   }
   .nav__logo {
+    opacity: 0.763;
     margin: 0 auto;
     width: 50%;
     align-items: center;
