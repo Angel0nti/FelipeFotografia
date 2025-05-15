@@ -160,7 +160,7 @@ body {
    SLIDER SECTION
 ====================================== */
 .slide-section {
-  margin-top: 5rem;
+  margin-top: 10rem;
   height: 55rem;
   position: relative;
   border-bottom: 1px solid gray;
@@ -168,7 +168,7 @@ body {
 }
 
 .slides-container {
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
   margin-top: 4rem;
   height: 100%;
   width: 100%;
@@ -176,6 +176,7 @@ body {
 }
 
 .slider {
+  margin-top: 4rem;
   max-width: 100%;
   height: 90%;
   top: 50%;
@@ -186,6 +187,7 @@ body {
 }
 
 .slider-controls {
+  margin-top: 3rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -730,6 +732,7 @@ body {
   }
 
   .btn-image-slide:hover {
+    /* transform: scale(1.3); */
     color: transparent;
     background-color: rgba(190, 189, 189, 0.801);
   }
