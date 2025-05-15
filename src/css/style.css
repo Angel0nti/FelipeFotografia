@@ -692,8 +692,12 @@ body {
     text-align: center;
   }
   .slide {
+    position: relative;
     flex: 0 0 100%;
+    transition: transform 0.3s ease;
     width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
   }
   .slide > img {
     width: 100%;
