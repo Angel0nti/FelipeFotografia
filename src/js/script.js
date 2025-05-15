@@ -112,10 +112,16 @@ const sliderData = {
 
 const renderSlides = images => {
   spinner.classList.remove('hidden');
+
+  currentSlide = 0;
+
   const existingSlides = slidesContainer.querySelectorAll('.slide');
   existingSlides.forEach(slide => slide.remove());
 
   currentSlides = images;
+
+  moveToSlide(0);
+
   let loadedCount = 0;
 
   images.forEach((img, i) => {
@@ -140,7 +146,6 @@ const renderSlides = images => {
   });
 
   slidesContainer.appendChild(spinner);
-  currentSlide = 0;
 };
 
 buttonsByCategory.forEach(btn => {
