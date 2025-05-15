@@ -95,6 +95,7 @@ window.addEventListener('load', () => {
 
 // -----------DYNAMIC SLIDER TABBED STARTS -------
 const slidesContainer = document.querySelector('.slides-container');
+const spinner = document.querySelector('.spinner');
 const buttonsByCategory = document.querySelectorAll('.btn-image-slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
@@ -110,16 +111,35 @@ const sliderData = {
 };
 
 const renderSlides = images => {
-  slidesContainer.innerHTML = '';
+  spinner.classList.remove('hidden');
+  const existingSlides = slidesContainer.querySelectorAll('.slide');
+  existingSlides.forEach(slide => slide.remove());
+
   currentSlides = images;
+  let loadedCount = 0;
+
   images.forEach((img, i) => {
     const slide = document.createElement('div');
     slide.classList.add('slide');
     slide.style.transform = `translateX(${100 * i}%)`;
-    slide.innerHTML = `<img src="${img}" alt="slide" />`;
 
+    const image = new Image();
+    image.src = img;
+    image.alt = 'slide';
+
+    image.onload = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        spinner.classList.add('hidden');
+        moveToSlide(0);
+      }
+    };
+
+    slide.appendChild(image);
     slidesContainer.appendChild(slide);
   });
+
+  slidesContainer.appendChild(spinner);
   currentSlide = 0;
 };
 
