@@ -662,15 +662,20 @@ body {
     height: 60rem;
   }
   .slider {
-    margin-top: 1rem;
     position: relative;
     top: auto;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    width: 100%;
+    height: 50%;
   }
   .slides-container {
-    top: auto;
-    left: auto;
-    transform: none;
+    display: flex;
+    position: relative;
+    gap: 0.5rem;
+    max-width: 100%;
+    margin-top: 1rem;
   }
   .slider-controls {
     display: flex;
