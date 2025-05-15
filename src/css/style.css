@@ -3,7 +3,7 @@
 ====================================== */
 :root {
   --background: rgba(0, 0, 0, 0.973);
-  --background-sticky: rgba(0, 0, 0, 0.686);
+  --background-sticky: rgba(0, 0, 0, 0.763);
   --nav-item-color: white;
   --nav-item-color-hover: gray;
   --hero-title-color: rgb(255, 255, 255);
@@ -74,7 +74,7 @@ body {
   position: fixed;
   width: 100%;
   min-width: 100%;
-  background-color: rgba(0, 0, 0, 0.763);
+  background-color: var(--background-sticky);
   animation: slideDown 0.3s linear;
   z-index: 999;
 }
@@ -92,7 +92,7 @@ body {
 .nav__logo {
   width: 25%;
   height: 6rem;
-  background-color: black;
+  background-color: var(--background-sticky);
   margin-right: 25rem;
   margin-left: 15rem;
   padding: 0;
@@ -587,7 +587,7 @@ body {
     transform: translate(-50%, 50%) rotate(45deg);
   }
   .nav__logo {
-    opacity: 0.763;
+    background-color: var(--background-sticky);
     margin: 0 auto;
     width: 50%;
     align-items: center;
