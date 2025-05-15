@@ -74,7 +74,7 @@ body {
   position: fixed;
   width: 100%;
   min-width: 100%;
-  background-color: var(--background-sticky);
+  background-color: var(--background);
   animation: slideDown 0.3s linear;
   z-index: 999;
 }
@@ -587,7 +587,6 @@ body {
     transform: translate(-50%, 50%) rotate(45deg);
   }
   .nav__logo {
-    background-color: var(--background-sticky);
     margin: 0 auto;
     width: 50%;
     align-items: center;
