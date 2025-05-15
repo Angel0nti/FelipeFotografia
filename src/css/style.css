@@ -55,8 +55,8 @@ body {
 }
 .off-screen-menu {
   background-color: black;
-  height: 30%;
-  width: 25%;
+  height: 35%;
+  width: 40%;
   max-width: 450px;
   position: fixed;
   top: 0;
@@ -541,8 +541,8 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .off-screen-menu.active {
-    max-height: 30%;
-    max-width: 35%;
+    max-height: 35%;
+    max-width: 40%;
     padding: 0.9rem;
     z-index: 200;
     right: 0;
@@ -644,7 +644,7 @@ body {
     margin-top: 4rem;
     margin-bottom: 0;
     padding: 0;
-    max-width: 99%;
+    max-width: 95%;
     height: 60rem;
   }
   .slider {
