@@ -676,11 +676,10 @@ body {
     overflow: hidden;
   }
   .slides-container {
+    overflow: hidden; /* para ocultar imágenes fuera del viewport */
+    width: 100%;
     display: flex;
-    /* overflow-x: auto; */
-    gap: 0.5rem;
-    /* scroll-snap-type: x mandatory; */
-    margin-top: 1rem;
+    transition: transform 0.3s ease; /* para animar el movimiento */
   }
   .slider-controls {
     display: flex;
@@ -693,13 +692,8 @@ body {
     text-align: center;
   }
   .slide {
-    position: relative;
     flex: 0 0 100%;
-    transition: transform 0.3s ease;
-    /* scroll-snap-align: start; */
     width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
   }
   .slide > img {
     width: 100%;

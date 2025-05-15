@@ -156,9 +156,7 @@ buttonsByCategory.forEach(btn => {
 });
 
 const moveToSlide = slideIndex => {
-  document.querySelectorAll('.slide').forEach((s, i) => {
-    s.style.transform = `translateX(${100 * (i - slideIndex)}%)`;
-  });
+  slidesContainer.style.transform = `translateX(${-100 * slideIndex}%)`;
 };
 
 btnRight.addEventListener('click', () => {
