@@ -127,7 +127,7 @@ const renderSlides = images => {
   images.forEach((img, i) => {
     const slide = document.createElement('div');
     slide.classList.add('slide');
-    // slide.style.transform = `translateX(${100 * i}%)`;
+    slide.style.transform = `translateX(${100 * i}%)`;
 
     const image = new Image();
     image.src = img;
