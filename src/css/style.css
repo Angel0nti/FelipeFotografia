@@ -706,7 +706,7 @@ body {
   }
 
   .btn-image-slide {
-    margin: 0;
+    /* margin: 0;
     text-align: center;
     align-items: center;
     max-width: 45%;
@@ -715,16 +715,34 @@ body {
     background-color: var(--background);
     color: var(--slider-btns-color);
     border: 1px solid white;
-    overflow: hidden;
+    overflow: hidden; */
+    color: transparent; /* Oculta el texto */
+    position: relative;
+    max-width: 50%; /* Reduce ancho para emoji */
+    padding: 0.5rem 0.5rem;
+  }
+  .btn-image-slide:nth-child(3) {
+    max-width: 25%;
   }
 
   .btn-image-slide:hover {
+    color: transparent; /* Oculta el texto */
     background-color: rgba(152, 152, 152, 0.801);
-    color: white;
   }
   .btn-image-slide:active {
+    color: transparent; /* Oculta el texto */
     transform: translateY(0.3rem);
   }
+  .btn-image-slide::after {
+    content: attr(data-emoji);
+    color: var(--slider-btns-color);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+  }
+
   .spinner {
     position: absolute;
     left: 50%;
