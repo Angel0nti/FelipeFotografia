@@ -696,7 +696,7 @@ body {
     position: relative;
     flex: 0 0 auto;
     scroll-snap-align: start;
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-bottom: 1rem;
   }
