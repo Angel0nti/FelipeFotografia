@@ -127,7 +127,7 @@ const renderSlides = images => {
   images.forEach((img, i) => {
     const slide = document.createElement('div');
     slide.classList.add('slide');
-    slide.style.transform = `translateX(${100 * i}%)`;
+    // slide.style.transform = `translateX(${100 * i}%)`;
 
     const image = new Image();
     image.src = img;
@@ -146,6 +146,7 @@ const renderSlides = images => {
   });
 
   slidesContainer.appendChild(spinner);
+  moveToSlide(0);
 };
 
 buttonsByCategory.forEach(btn => {
@@ -156,7 +157,7 @@ buttonsByCategory.forEach(btn => {
 });
 
 const moveToSlide = slideIndex => {
-  slidesContainer.style.transform = `translateX(${-100 * slideIndex}%)`;
+  slidesContainer.style.transform = `translateX(-${100 * slideIndex}%)`;
 };
 
 btnRight.addEventListener('click', () => {
