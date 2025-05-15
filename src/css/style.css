@@ -655,7 +655,7 @@ body {
 
 @media (max-width: 768px) {
   .slide-section {
-    margin-top: 4rem;
+    margin-top: 0;
     margin-bottom: 0;
     padding: 0;
     max-width: 95%;
@@ -685,6 +685,7 @@ body {
     text-align: center;
   }
   .slide > img {
+    margin-top: 0;
     width: 100%;
     margin: 0;
     object-fit: contain;
@@ -714,6 +715,8 @@ body {
   }
 
   .btn-image-slide {
+    margin-top: 0;
+    margin-bottom: 0;
     border-radius: 50%;
     position: relative;
     color: transparent;
@@ -739,6 +742,8 @@ body {
     transform: translateY(0.3rem);
   }
   .btn-image-slide::after {
+    margin-top: 0;
+    margin-bottom: 0;
     content: attr(data-emoji);
     color: var(--slider-btns-color);
     font-size: 1.8rem;
