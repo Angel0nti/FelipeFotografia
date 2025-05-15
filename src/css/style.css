@@ -367,6 +367,7 @@ body {
 }
 
 .event-slider {
+  margin-top: 0;
   border-radius: 2rem;
   position: relative;
   overflow: hidden;
@@ -654,11 +655,14 @@ body {
 
 @media (max-width: 768px) {
   .slide-section {
-    margin-top: 8rem;
+    /* margin-top: 8rem;
     margin-bottom: 0;
     padding: 0;
     max-width: 95%;
-    height: 60rem;
+    height: 45rem; */
+    height: auto;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
   }
   .slider {
     position: relative;
