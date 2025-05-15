@@ -258,7 +258,6 @@ body {
 }
 
 .btn-image-slide {
-  opacity: 0.5;
   padding: 1rem 1.6rem;
   font-size: 1.3rem;
   background-color: var(--background);
@@ -628,8 +627,8 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .hero {
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-top: 0;
+    margin-bottom: 7rem;
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -655,7 +654,7 @@ body {
 
 @media (max-width: 768px) {
   .slide-section {
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-bottom: 0;
     padding: 0;
     max-width: 95%;
@@ -682,7 +681,7 @@ body {
     justify-content: center;
     /* flex-wrap: wrap; */
     gap: 0.4rem;
-    margin-top: 4rem;
+    margin-top: 4.3rem;
     margin-bottom: 0;
     padding: 0 0.5rem;
     text-align: center;
