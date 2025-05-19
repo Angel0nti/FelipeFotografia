@@ -2,10 +2,16 @@
 // // -------------STICKY NAVIGATION---------------- //
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.hero');
-
 const navHeight = nav.getBoundingClientRect().height;
-
 let isSticky = false;
+
+function updateMarginTop() {
+  if (window.innerWidth > 768 && isSticky) {
+    header.style.marginTop = `${navHeight}px`;
+  } else {
+    header.style.marginTop = null;
+  }
+}
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -13,14 +19,14 @@ const obs = new IntersectionObserver(
     if (!entry.isIntersecting) {
       if (!isSticky) {
         nav.classList.add('sticky');
-        header.style.marginTop = `${navHeight}px`;
         isSticky = true;
+        updateMarginTop();
       }
     } else {
       if (isSticky) {
         nav.classList.remove('sticky');
-        header.style.marginTop = `0`;
         isSticky = false;
+        updateMarginTop();
       }
     }
   },
@@ -32,6 +38,10 @@ const obs = new IntersectionObserver(
 );
 
 obs.observe(header);
+
+window.addEventListener('resize', () => {
+  updateMarginTop();
+});
 
 // ----------- INTERSECTION OBSERVER API  REVEALING ELEMENTS STARTS -------------
 
@@ -236,12 +246,26 @@ hamMenu.addEventListener('click', event => {
   event.stopPropagation();
   hamMenu.classList.toggle('active');
   offsScreenMenu.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
 });
 offsScreenMenu.addEventListener('click', event => {
   event.stopPropagation();
 });
 
+// ---------- CLOSE HAM BY CLICKING ON THE SCREEN ----
 document.addEventListener('click', () => {
   hamMenu.classList.remove('active');
   offsScreenMenu.classList.remove('active');
+  document.body.classList.remove('menu-open');
 });
+
+// ------------ CLOSE HAM BY CLICKING ON A LINK -----
+const hamNavLink = document.querySelectorAll('.nav__link');
+
+hamNavLink.forEach(link =>
+  link.addEventListener('click', () => {
+    hamMenu.classList.remove('active');
+    offsScreenMenu.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  })
+);
