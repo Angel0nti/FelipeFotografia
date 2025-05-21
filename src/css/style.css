@@ -667,13 +667,13 @@ body {
   .content-title {
     font-size: 0.8rem;
     margin: 0 auto;
-    padding: 0.5rem 1rem;
+    padding: 1.1rem 1.1rem;
     max-width: 90%;
     text-align: center;
     z-index: 10;
   }
   .title-span {
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 
