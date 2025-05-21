@@ -1,0 +1,23 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="white"
+  stroke-width="2"
+  stroke-linejoin="round"
+  stroke-linecap="round"
+>
+  <!-- Montaña principal -->
+  <polygon points="12,52 32,12 52,52" fill="none" stroke="white" />
+  
+  <!-- Pico con nieve -->
+  <polygon points="24,30 32,18 40,30" fill="white" stroke="white" />
+  
+  <!-- Montaña secundaria (más pequeña) -->
+  <polygon points="40,52 48,36 56,52" fill="none" stroke="white" />
+  
+  <!-- Pico secundaria con nieve -->
+  <polygon points="44,44 48,36 52,44" fill="white" stroke="white" />
+</svg>

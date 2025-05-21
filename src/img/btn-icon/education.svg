@@ -1,0 +1,43 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false"
+>
+  <!-- Tapa del birrete -->
+  <path
+    d="M32 6L4 20L32 34L60 20L32 6Z"
+    fill="white"
+    stroke="white"
+    stroke-width="2"
+  />
+  <!-- Capucha / banda con forma -->
+  <path
+    d="M22 34C18 38 18 44 22 46H42C46 44 46 38 42 34H22Z"
+    fill="white"
+    stroke="white"
+    stroke-width="2"
+  />
+  <!-- Borla: línea desde tapa -->
+  <line
+    x1="12"
+    y1="20"
+    x2="12"
+    y2="50"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  <!-- Borla: círculo -->
+  <circle
+    cx="12"
+    cy="54"
+    r="4"
+    fill="white"
+    stroke="white"
+    stroke-width="2"
+  />
+</svg>

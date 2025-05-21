@@ -768,18 +768,35 @@ body {
   }
 
   .btn-image-slide {
-    margin-top: 0;
-    margin-bottom: 0;
-    border-radius: 50%;
-    position: relative;
-    color: transparent;
-    background-color: var(--background);
-    border: 1px solid rgba(255, 255, 255, 0.746);
-    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     width: 3.5rem;
     height: 3.5rem;
-    font-size: 0.75rem;
-    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-color: black;
+    font-size: 0;
+  }
+  .btn-image-slide.exteriores {
+    background-image: url('../img/btn-icon/trees.svg');
+    background-size: 90%;
+  }
+  .btn-image-slide.weddings {
+    background-image: url('../img/btn-icon/man-woman.svg');
+    background-size: 80%;
+  }
+  .btn-image-slide.graduaciones {
+    background-image: url('../img/btn-icon/education.svg');
+    background-size: 85%;
+  }
+  .btn-image-slide.retratos {
+    background-image: url('../img/btn-icon/camera-portrait.svg');
+    background-size: 80%;
   }
   .btn-image-slide:nth-child(3) {
     max-width: 25%;
@@ -794,15 +811,7 @@ body {
     transform: translateY(0.3rem);
   }
   .btn-image-slide::after {
-    margin-top: 0;
-    margin-bottom: 0;
-    content: attr(data-emoji);
-    color: var(--slider-btns-color);
-    font-size: 1.8rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    content: none;
   }
 
   .spinner {
