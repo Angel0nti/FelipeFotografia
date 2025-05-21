@@ -449,9 +449,10 @@ body {
    GRID STARTS
 ====================================== */
 .grid {
+  position: relative;
   padding: 2rem;
   height: 100%;
-  margin: 3rem;
+  /* margin: 3rem; */
 }
 
 .grid-collage {
@@ -495,6 +496,21 @@ body {
 .item5 {
   grid-column: span 2;
   grid-row: span 1;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 /* ======================================
    FOOTER STARTS
@@ -966,7 +982,7 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .footer {
-    margin-top: 6rem;
+    margin-top: 0;
     height: 50%;
     background-color: var(--background);
     display: flex;
@@ -1015,10 +1031,12 @@ body {
    GRID STARTS
 ====================================== */
   .grid {
+    position: relative;
     padding: 0;
     height: 100%;
     width: 100%;
     margin: 0;
+    margin-bottom: 0;
   }
 
   .grid-collage {
@@ -1071,5 +1089,19 @@ body {
     margin: 0;
     grid-column: span 2;
     grid-row: span 1;
+  }
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
