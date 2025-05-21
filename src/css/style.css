@@ -667,7 +667,6 @@ body {
   }
 
   .content-title {
-    position: static;
     transform: none;
     font-size: 0.8rem;
     margin: 0 auto;
