@@ -114,10 +114,34 @@ let currentSlide = 0;
 let currentSlides = [];
 
 const sliderData = {
-  weddings: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `bodas/boda${n}`),
-  exteriores: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `ext/ext${n}`),
-  graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'].map(n => `grad/grad${n}`),
-  retratos: ['1.jpg', '2.jpg', '3.jpg'].map(n => `estudio/est${n}`),
+  weddings: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map(
+    n => `bodas/boda${n}`
+  ),
+  exteriores: [
+    '1.jpg',
+    '2.jpg',
+    '3.jpg',
+    '4.jpg',
+    '5.jpg',
+    '6.jpg',
+    '7.jpg',
+    '8.jpg',
+    '9.jpg',
+  ].map(n => `ext/ext${n}`),
+  graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map(
+    n => `grad/grad${n}`
+  ),
+  retratos: [
+    '1.jpg',
+    '2.jpg',
+    '3.jpg',
+    '4.jpg',
+    '5.jpg',
+    '6.jpg',
+    '7.jpg',
+    '8.jpg',
+    '9.jpg',
+  ].map(n => `estudio/est${n}`),
 };
 
 const renderSlides = images => {
@@ -201,8 +225,8 @@ const sliderEventData = {
     '4.jpg',
     '5.jpg',
     '6.jpg',
-    // '7.jpg',
-    // '8.jpg',
+    '7.jpg',
+    '8.jpg',
     // '9.jpg',
   ].map(numImage => `eventos/event${numImage}`),
 };
@@ -236,7 +260,7 @@ setInterval(() => {
   if (currEventSlideArr.length === 0) return;
   currEventSlide = (currEventSlide + 1) % currEventSlideArr.length;
   moveToEventSlide(currEventSlide);
-}, 1500);
+}, 1300);
 
 // ------------------- HAMBURGER BUTTON -------------------
 const hamMenu = document.querySelector('.ham-menu');
