@@ -284,12 +284,12 @@ document.addEventListener('click', () => {
 });
 
 // ------------ CLOSE HAM BY CLICKING ON A LINK -----
-const hamNavLink = document.querySelectorAll('.nav__link');
+// const hamNavLink = document.querySelectorAll('.nav__link');
 
-hamNavLink.forEach(link =>
-  link.addEventListener('click', () => {
-    hamMenu.classList.remove('active');
-    offsScreenMenu.classList.remove('active');
-    document.body.classList.remove('menu-open');
-  })
-);
+// hamNavLink.forEach(link =>
+//   link.addEventListener('click', () => {
+//     hamMenu.classList.remove('active');
+//     offsScreenMenu.classList.remove('active');
+//     document.body.classList.remove('menu-open');
+//   })
+// );

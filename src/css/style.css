@@ -350,6 +350,7 @@ body {
   color: gray;
 }
 .acerca-de-img img {
+  box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.5);
   max-width: 90%;
   border-radius: 2rem;
 }
@@ -409,6 +410,7 @@ body {
 }
 
 .slide-event img {
+  box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.8);
   max-width: 70%;
   max-height: auto;
   object-fit: contain;
@@ -430,9 +432,9 @@ body {
 }
 
 .event-title {
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 2.3rem;
-  line-height: 2.3;
+  line-height: 2;
   color: white;
   text-align: center;
 }
@@ -530,6 +532,7 @@ body {
   justify-content: space-around;
 }
 .footer__title {
+  margin-top: 3rem;
   margin-bottom: 0;
   text-align: center;
   align-items: center;
@@ -688,7 +691,7 @@ body {
   .hero {
     padding-top: 60px;
     margin-top: 0;
-    margin-bottom: 7rem;
+    margin-bottom: 9rem;
     position: relative;
     overflow: hidden;
     height: auto;
@@ -818,6 +821,7 @@ body {
     background-size: 60%;
     background-color: black;
     font-size: 0;
+    box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.4);
   }
   .btn-image-slide.exteriores {
     background-image: url('../img/btn-icon/trees.svg');
@@ -871,6 +875,7 @@ body {
 
 @media (max-width: 768px) {
   .acerca-de-container {
+    margin-top: 0;
     margin-bottom: 0rem;
     display: flex;
     flex-direction: column;
@@ -895,13 +900,13 @@ body {
     padding: 0;
   }
   .acerca-de-content p {
-    line-height: 1.5;
-    font-size: 1rem;
+    line-height: 1.3;
+    font-size: 0.9rem;
     color: white;
     text-align: justify;
   }
   .acerca-de-title {
-    line-height: 3;
+    line-height: 2;
     border-top: 0;
     color: white;
     margin-bottom: 2rem;
@@ -913,16 +918,16 @@ body {
   }
   .acerca-de-img img {
     margin-left: 1rem;
-
     width: 100%;
     height: auto;
     border-radius: 2rem;
+    box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.5);
   }
 
   .img-name {
     margin-left: 1rem;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -960,6 +965,7 @@ body {
     object-fit: contain;
     max-width: 75%;
     max-height: auto;
+    box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.3);
   }
 
   .event-text-container {
@@ -978,7 +984,7 @@ body {
   .event-title {
     margin: 0;
     padding: 0;
-    line-height: 2;
+    line-height: 1.5;
     font-size: 2rem;
   }
 
@@ -1016,6 +1022,8 @@ body {
     justify-content: space-around;
   }
   .footer__title {
+    margin-top: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.4);
     margin-bottom: 0;
     text-align: center;
     align-items: center;
