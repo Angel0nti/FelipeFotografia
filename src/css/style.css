@@ -707,11 +707,14 @@ body {
     max-width: 90%;
     text-align: center;
     z-index: 10;
+    top: 60%;
+    left: 60%;
+    transform: translate(-70%, -50%);
   }
   .title-span {
     box-decoration-break: clone;
     display: inline-block;
-    padding: 0.7rem 1rem;
+    padding: 0.4rem 0.9rem;
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.9),
       rgba(136, 136, 136, 0.969)
