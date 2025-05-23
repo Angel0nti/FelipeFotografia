@@ -171,6 +171,8 @@ class ImageSlider {
   _renderSlides(images) {
     this.spinner.classList.remove('hidden');
     this.container.innerHTML = '';
+    this.container.appendChild(this.spinner);
+
     this.currentSlide = 0;
     this.currentImages = images;
 
@@ -199,8 +201,9 @@ class ImageSlider {
       slide.appendChild(image);
       this.container.appendChild(slide);
     });
-  }
 
+    this._moveToSlide(0);
+  }
   _moveToSlide(index) {
     if (window.innerWidth > 768) {
       const slides = this.container.querySelectorAll('.slide');
