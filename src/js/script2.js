@@ -129,12 +129,13 @@ class ScrollReset {
   }
 
   _resetOnLoad() {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        history.replaceState(null, null, '');
-      }, 0);
-    });
+    window.addEventListener('load', this._timeOut.bind(this));
+  }
+  _timeOut() {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      history.replaceState(null, '', window.location.pathname);
+    }, 0);
   }
 }
 new ScrollReset();
@@ -218,31 +219,38 @@ class ImageSlider {
   }
 
   _setupNavButtons() {
-    this.btnRight.addEventListener('click', () => {
-      if (this.currentImages.length === 0) return;
-      const nextIndex = (this.currentSlide + 1) % this.currentImages.length;
-      this._moveToSlide(nextIndex);
-    });
-    this.btnLeft.addEventListener('click', () => {
-      if (this.currentImages.length === 0) return;
-      const prevIndex =
-        (this.currentSlide - 1 + this.currentImages.length) %
-        this.currentImages.length;
-      this._moveToSlide(prevIndex);
-    });
+    this.btnRight.addEventListener('click', this._moveToRight.bind(this));
+    this.btnLeft.addEventListener('click', this._moveToLeft.bind(this));
+  }
+
+  _moveToRight() {
+    if (this.currentImages.length === 0) return;
+    const nextIndex = (this.currentSlide + 1) % this.currentImages.length;
+    this._moveToSlide(nextIndex);
+  }
+
+  _moveToLeft() {
+    if (this.currentImages.length === 0) return;
+    const prevIndex =
+      (this.currentSlide - 1 + this.currentImages.length) %
+      this.currentImages.length;
+    this._moveToSlide(prevIndex);
   }
 
   _bindCategoryButtons() {
     this.buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const category = button.dataset.category;
-        const images = this.data[category];
-
-        if (images) {
-          this._renderSlides(images);
-        }
-      });
+      button.addEventListener('click', this._btnToEachCategory.bind(this));
     });
+  }
+
+  _btnToEachCategory(event) {
+    const button = event.currentTarget;
+    const category = button.dataset.category;
+    const images = this.data[category];
+
+    if (images) {
+      this._renderSlides(images);
+    }
   }
 }
 const slider = new ImageSlider({

@@ -176,7 +176,7 @@ body {
    SLIDER SECTION
 ====================================== */
 .slide-section {
-  margin-top: 10rem;
+  margin-top: 15rem;
   height: 55rem;
   position: relative;
   border-bottom: 1px solid gray;
@@ -735,7 +735,7 @@ body {
 @media (max-width: 768px) {
   .slide-section {
     height: auto;
-    margin-top: 8rem;
+    margin-top: 15rem;
     padding-bottom: 2rem;
   }
   .slider {
