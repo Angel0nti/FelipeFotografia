@@ -1,12 +1,14 @@
 'strict';
 
 class StickyNav {
-  constructor(navSelector, headerSelector) {
+  constructor(navSelector, headerSelector, navLogo) {
     this.nav = document.querySelector(navSelector);
     this.header = document.querySelector(headerSelector);
     this.navHeight = this.nav.getBoundingClientRect().height;
+    this.navLogo = document.querySelector(navLogo);
     this.isSticky = false;
 
+    this._goToTop();
     this._initObserver();
     this._bindResizeEvent();
   }
@@ -40,13 +42,23 @@ class StickyNav {
   _bindResizeEvent() {
     window.addEventListener('resize', () => this._updateMarginTop());
   }
+
+  _goToTop() {
+    this.navLogo.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
+
   destroy() {
     // Clear observer and event resize when needed
     this.observer.disconnect();
     window.removeEventListener('resize', this._updateMarginTop);
   }
 }
-new StickyNav('.nav', '.hero');
+new StickyNav('.nav', '.hero', '.nav__logo');
 // const stickyNav = new StickyNav('.nav', '.hero');
 // stickyNav.destroy();
 
@@ -162,7 +174,7 @@ class ImageSlider {
     this._bindCategoryButtons();
     this._setupNavButtons();
 
-    // Load first category by default
+    // Load first category by default: weddings
     const defaultCategory = Object.keys(data)[0];
     if (defaultCategory) {
       this._renderSlides(data[defaultCategory]);
