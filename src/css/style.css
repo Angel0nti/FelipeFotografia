@@ -619,7 +619,7 @@ body {
   }
 
   100% {
-    transform: skew(30deg) translateY(0) translate(-70%);
+    transform: translateY(0) translate(-70%);
     opacity: 1;
   }
 }
