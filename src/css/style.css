@@ -593,33 +593,33 @@ body {
 
 @keyframes slideBottom {
   0% {
-    transform: translateY(20rem) translateX(-50%);
+    transform: translateY(20rem) translateX(-50%) skewX(-20deg);
     opacity: 0;
   }
 
   50% {
-    transform: translateX(-50%);
+    transform: translateX(-50%) skewX(-20deg);
     opacity: 0.3;
   }
 
   100% {
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(0) translateX(-50%) skewX(-20deg);
     opacity: 1;
   }
 }
 @keyframes slideBottomMobile {
   0% {
-    transform: translateY(20rem) translate(-70%);
+    transform: translateY(20rem) translate(-70%) skewX(-20deg);
     opacity: 0;
   }
 
   50% {
-    transform: translate(-70%);
+    transform: translate(-70%) skewX(-20deg);
     opacity: 0.3;
   }
 
   100% {
-    transform: translateY(0) translate(-70%);
+    transform: translateY(0) translate(-70%) skewX(-20deg);
     opacity: 1;
   }
 }
