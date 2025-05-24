@@ -614,7 +614,7 @@ body {
   }
 
   95% {
-    transform: skew(30deg) translate(-70%);
+    transform: translate(-70%);
     opacity: 0.5;
   }
 
@@ -629,7 +629,7 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .off-screen-menu.active {
-    top: 3.5rem;
+    top: 2.5rem;
     max-height: 30%;
     max-width: 35%;
     padding: 0.4rem;
