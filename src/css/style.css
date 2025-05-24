@@ -629,7 +629,7 @@ body {
 ====================================== */
 @media (max-width: 768px) {
   .off-screen-menu.active {
-    top: 4rem;
+    top: 3rem;
     max-height: 35%;
     max-width: 35%;
     padding: 0.4rem;
@@ -749,7 +749,7 @@ body {
     z-index: 10;
     top: 60%;
     left: 60%;
-    transform: translate(-70%, -50%);
+    transform: translate(-70%, -50%) skew(-20deg);
     animation: slideBottomMobile 0.8s ease-in-out;
   }
   .title-span {
