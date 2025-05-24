@@ -599,7 +599,7 @@ body {
 
   95% {
     transform: translateX(-50%);
-    opacity: 0.5;
+    opacity: 0;
   }
 
   100% {
@@ -615,7 +615,7 @@ body {
 
   95% {
     transform: translate(-70%);
-    opacity: 0.5;
+    opacity: 0;
   }
 
   100% {
