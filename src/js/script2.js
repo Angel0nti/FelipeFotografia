@@ -263,32 +263,49 @@ class ImageSlider {
     images.forEach((src, i) => {
       const slide = document.createElement('div');
       slide.classList.add('slide');
-
       if (window.innerWidth > 768) {
         slide.style.transform = `translateX(${100 * i}%)`;
       }
 
       const image = new Image();
-      image.src = src;
+      image.dataset.src = src;
       image.alt = 'slide';
       image.loading = 'lazy';
       image.width = 800;
       image.height = 533;
-
-      image.onload = () => {
-        if (!firstShown) {
-          firstShown = true;
-          this.spinner.classList.add('hidden');
-          this._moveToSlide(0);
-        }
-      };
+      image.classList.add('lazy-img');
 
       slide.appendChild(image);
       this.container.appendChild(slide);
     });
 
+    this._observeImages();
     this._moveToSlide(0);
   }
+
+  _observeImages() {
+    const lazyImages = this.container.querySelectorAll('.lazy-img');
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.onload = () => {
+            img.classList.remove('lazy-img');
+            this.spinner.classList.add('hidden');
+          };
+          observer.unobserve(img);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+    lazyImages.forEach(img => observer.observe(img));
+  }
+
   _moveToSlide(index) {
     if (window.innerWidth > 768) {
       const slides = this.container.querySelectorAll('.slide');
@@ -396,7 +413,7 @@ class EventSlider {
     this.container.innerHTML = '';
     this.slides = this.images.map(src => {
       const slide = document.createElement('div');
-      slide.classList.add('slide-event'); // coincide con CSS original
+      slide.classList.add('slide-event');
 
       const img = new Image();
       img.src = src;
