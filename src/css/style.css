@@ -40,7 +40,7 @@ body {
 .section--hidden {
   opacity: 0;
   transform: translateY(3rem);
-  transition: none;
+  pointer-events: none;
 }
 
 /* ======================================
@@ -230,6 +230,7 @@ body {
   max-height: 100%;
   object-fit: contain;
   pointer-events: none;
+  aspect-ratio: 3 / 2;
 }
 
 .slider__btn {
@@ -310,12 +311,34 @@ body {
 .acerca-de-container {
   border-bottom: 1px solid gray;
   height: 100%;
+  align-items: center;
   margin-top: 10rem;
   padding: 1rem;
   display: flex;
   gap: 0;
-  display: table-cell;
 }
+
+.section:not(.section--hidden) {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section--hidden .acerca-de-content {
+  opacity: 0;
+  transform: translateX(30rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.acerca-de-content.animate-in {
+  animation: fadeSlideIn 0.8s forwards;
+}
+
+#about-me {
+  overflow-x: hidden;
+}
+
 .section-about {
   margin-bottom: 0;
   display: table;
@@ -373,7 +396,18 @@ body {
   height: 100%;
   overflow: hidden;
 }
+.section--hidden .event-text-container {
+  opacity: 0;
+  transform: translateX(30rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.event-text-container.animate-in {
+  animation: fadeSlideIn 0.8s forwards;
+}
 
+#eventos {
+  overflow-x: hidden;
+}
 .slide-event-section {
   border-bottom: 1px solid gray;
   display: flex;
@@ -411,11 +445,10 @@ body {
 
 .slide-event img {
   box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.8);
-  max-width: 70%;
-  max-height: auto;
-  object-fit: contain;
-
   display: block;
+  width: 75%;
+  height: auto;
+  object-fit: contain;
 }
 
 .event-text-container {
@@ -624,6 +657,29 @@ body {
   }
 }
 
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeSlideInMobile {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(7rem);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
 /* ======================================
    ANIMATIONS ENDS
 ====================================== */
@@ -635,7 +691,6 @@ body {
     padding: 0.4rem;
     z-index: 200;
     transform: translateX(0);
-    border-radius: 1rem;
     transition: transform 0.5s ease-in-out;
   }
 
@@ -702,14 +757,17 @@ body {
   }
   .nav__link {
     transition: all 0.4s;
+    display: inline-block;
+    padding: 0.3rem 0.3rem;
   }
   .nav__link:link:hover,
   .nav__link:visited:hover {
-    padding: 0.2rem 0.3rem;
-    box-shadow: 0 0.4rem 0.9rem rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.4rem 0.9rem rgba(255, 255, 255, 0.923);
     border-bottom: none;
     border-radius: 1rem;
     overflow: hidden;
+    padding: 0.3rem 0.3rem; /* mantener padding igual para evitar saltos */
   }
   .nav__links-ham {
     text-decoration: none;
@@ -930,6 +988,11 @@ body {
   }
   .section-about {
     margin-bottom: 10rem;
+    overflow-x: hidden;
+  }
+  .section--hidden .acerca-de-content {
+    transform: translateY(1rem) translateX(0);
+    overflow-x: hidden;
   }
   .acerca-de-img {
     min-width: 100%;
@@ -940,6 +1003,9 @@ body {
     height: 50%;
     width: 100%;
     padding: 0;
+  }
+  .acerca-de-content.animate-in {
+    animation: fadeSlideInMobile 0.9s forwards;
   }
   .acerca-de-content p {
     line-height: 1.3;
@@ -986,7 +1052,13 @@ body {
     display: flex;
     flex-direction: column;
   }
-
+  .section--hidden .event-text-container {
+    transform: translateY(1rem) translateX(0);
+    overflow-x: hidden;
+  }
+  .event-text-container.animate-in {
+    animation: fadeSlideInMobile 0.9s forwards;
+  }
   .event-slider,
   .event-text-container {
     margin: 0;

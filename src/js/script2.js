@@ -93,8 +93,77 @@ class SectionRevealer {
     this.sections.forEach(section => this.observer.observe(section));
   }
 }
+class AboutMeRevealer extends SectionRevealer {
+  constructor() {
+    super('#about-me');
+    this._observeImageForAnimation();
+  }
 
-new SectionRevealer('.section');
+  _observeImageForAnimation() {
+    const img = this.sections[0].querySelector('#about-me-img');
+    const isMobile = window.innerWidth <= 768;
+
+    const options = {
+      root: null,
+      threshold: isMobile ? 0.9 : 0.1,
+      rootMargin: isMobile ? '0px 0px -10% 0px' : '0px 0px -20% 0px',
+    };
+
+    if (!img) return;
+
+    const imgObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        console.log('Hi');
+
+        const text = this.sections[0].querySelector('.acerca-de-content');
+        if (text) text.classList.add('animate-in');
+
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    imgObserver.observe(img);
+  }
+}
+
+class EventRevealer extends SectionRevealer {
+  constructor() {
+    super('#eventos');
+    this._observeImageForAnimation();
+  }
+
+  _observeImageForAnimation() {
+    const img = this.sections[0].querySelector('#slides-event-animation');
+    const isMobile = window.innerWidth <= 768;
+
+    const options = {
+      root: null,
+      threshold: isMobile ? 1 : 0.1,
+      rootMargin: isMobile ? '0px 0px -10% 0px' : '0px 0px -20% 0px',
+    };
+
+    if (!img) return;
+
+    const imgObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        console.log('Hi');
+
+        const text = this.sections[0].querySelector('.event-text-container');
+        if (text) text.classList.add('animate-in');
+
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    imgObserver.observe(img);
+  }
+}
+
+new SectionRevealer('.section:not(#about-me):not(#eventos)');
+new AboutMeRevealer();
+new EventRevealer();
 
 class SmoothScroller {
   constructor(linkSelector, navSelector) {
@@ -189,7 +258,7 @@ class ImageSlider {
     this.currentSlide = 0;
     this.currentImages = images;
 
-    let loadedCount = 0;
+    let firstShown = false;
 
     images.forEach((src, i) => {
       const slide = document.createElement('div');
@@ -202,10 +271,13 @@ class ImageSlider {
       const image = new Image();
       image.src = src;
       image.alt = 'slide';
+      image.loading = 'lazy';
+      image.width = 800;
+      image.height = 533;
 
       image.onload = () => {
-        loadedCount++;
-        if (loadedCount === images.length) {
+        if (!firstShown) {
+          firstShown = true;
           this.spinner.classList.add('hidden');
           this._moveToSlide(0);
         }
@@ -324,7 +396,9 @@ class EventSlider {
       const img = new Image();
       img.src = src;
       img.alt = 'event';
-
+      img.loading = 'lazy';
+      img.width = 800;
+      img.height = 533;
       slide.appendChild(img);
       this.container.appendChild(slide);
       return slide;
@@ -381,7 +455,11 @@ class HamburgerMenu {
 
     this.menu.addEventListener('click', e => e.stopPropagation());
 
-    document.addEventListener('click', () => this._closeMenu());
+    document.addEventListener('click', () => {
+      if (this.menu.classList.contains('active')) {
+        this._closeMenu();
+      }
+    });
   }
 
   _closeMenu() {
