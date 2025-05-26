@@ -345,33 +345,38 @@ const slider = new ImageSlider({
   btnRightSelector: '.slider__btn--right',
 
   data: {
-    weddings: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map(
+    weddings: ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp'].map(
       n => `bodas/boda${n}`
     ),
     exteriores: [
-      '1.jpg',
-      '2.jpg',
-      '3.jpg',
-      '4.jpg',
-      '5.jpg',
-      '6.jpg',
-      '7.jpg',
-      '8.jpg',
-      '9.jpg',
+      '1.webp',
+      '2.webp',
+      '3.webp',
+      '4.webp',
+      '5.webp',
+      '6.webp',
+      '7.webp',
+      '8.webp',
+      '9.webp',
     ].map(n => `ext/ext${n}`),
-    graduaciones: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'].map(
-      n => `grad/grad${n}`
-    ),
+    graduaciones: [
+      '1.webp',
+      '2.webp',
+      '3.webp',
+      '4.webp',
+      '5.webp',
+      '6.webp',
+    ].map(n => `grad/grad${n}`),
     retratos: [
-      '1.jpg',
-      '2.jpg',
-      '3.jpg',
-      '4.jpg',
-      '5.jpg',
-      '6.jpg',
-      '7.jpg',
-      '8.jpg',
-      '9.jpg',
+      '1.webp',
+      '2.webp',
+      '3.webp',
+      '4.webp',
+      '5.webp',
+      '6.webp',
+      '7.webp',
+      '8.webp',
+      '9.webp',
     ].map(n => `estudio/est${n}`),
   },
 });
@@ -425,14 +430,14 @@ class EventSlider {
 const eventSlider = new EventSlider({
   containerSelector: '.slides-event-container',
   images: [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
-    '4.jpg',
-    '5.jpg',
-    '6.jpg',
-    '7.jpg',
-    '8.jpg',
+    '1.webp',
+    '2.webp',
+    '3.webp',
+    '4.webp',
+    '5.webp',
+    '6.webp',
+    '7.webp',
+    '8.webp',
   ].map(n => `eventos/event${n}`),
   interval: 1300,
 });
