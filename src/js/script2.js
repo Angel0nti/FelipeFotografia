@@ -258,7 +258,7 @@ class ImageSlider {
     this.currentSlide = 0;
     this.currentImages = images;
 
-    let firstShown = false;
+    // let firstShown = false;
 
     images.forEach((src, i) => {
       const slide = document.createElement('div');
