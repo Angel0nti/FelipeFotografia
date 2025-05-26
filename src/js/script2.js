@@ -362,7 +362,7 @@ const slider = new ImageSlider({
   btnRightSelector: '.slider__btn--right',
 
   data: {
-    weddings: ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp'].map(
+    weddings: ['1.avif', '2.avif', '3.avif', '4.avif', '5.avif', '6.avif'].map(
       n => `bodas/boda${n}`
     ),
     exteriores: [
