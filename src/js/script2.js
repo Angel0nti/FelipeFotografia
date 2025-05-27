@@ -243,7 +243,6 @@ class ImageSlider {
     this._bindCategoryButtons();
     this._setupNavButtons();
 
-    // Load first category by default: weddings
     const defaultCategory = Object.keys(data)[0];
     if (defaultCategory) {
       this._renderSlides(data[defaultCategory]);
@@ -257,8 +256,6 @@ class ImageSlider {
 
     this.currentSlide = 0;
     this.currentImages = images;
-
-    // let firstShown = false;
 
     images.forEach((src, i) => {
       const slide = document.createElement('div');
