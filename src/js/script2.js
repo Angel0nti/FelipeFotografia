@@ -148,7 +148,6 @@ class EventRevealer extends SectionRevealer {
     const imgObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        console.log('Hi');
 
         const text = this.sections[0].querySelector('.event-text-container');
         if (text) text.classList.add('animate-in');
@@ -254,7 +253,7 @@ class ImageSlider {
     this.container.innerHTML = '';
     this.container.appendChild(this.spinner);
 
-    this.currentSlide = 0;
+    this.currentSlide;
     this.currentImages = images;
 
     images.forEach((src, i) => {
@@ -289,8 +288,8 @@ class ImageSlider {
           const img = entry.target;
           img.src = img.dataset.src;
           img.onload = () => {
-            img.classList.remove('lazy-img');
             this.spinner.classList.add('hidden');
+            img.classList.remove('lazy-img');
           };
           observer.unobserve(img);
         });

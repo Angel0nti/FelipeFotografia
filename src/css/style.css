@@ -30,7 +30,10 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
+html::selection {
+  background-color: white;
+  color: black;
+}
 .section {
   margin-bottom: 3rem;
   width: 100%;
@@ -116,7 +119,6 @@ body {
   text-decoration: none;
   transition: all 0.4s;
 }
-
 .nav__link:hover {
   border-radius: 2rem;
   padding: 0.9rem 1rem;
@@ -226,6 +228,7 @@ body {
 }
 
 .slide > img {
+  position: relative;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -306,8 +309,11 @@ body {
 }
 .lazy-img {
   opacity: 0.5;
-  filter: grayscale(100%);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  background-image: url('/static/spinner/spinner.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7rem 7rem;
+  transition: opacity 0.4s ease-in, background-image 0.3s ease-in-out;
 }
 
 /* ======================================
@@ -971,6 +977,9 @@ body {
   }
   .hidden {
     display: none;
+  }
+  .lazy-img {
+    opacity: 0;
   }
 }
 
