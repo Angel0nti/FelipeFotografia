@@ -366,19 +366,19 @@ html::selection {
   flex: 1;
 }
 
-.acerca-de-content p {
+/* .acerca-de-content p {
   max-inline-size: 100%;
   line-height: 1.3;
   font-size: 1.1rem;
   color: white;
   text-align: justify;
-}
+} */
 .acerca-de-title {
   max-inline-size: 100%;
   line-height: 2;
   color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .acerca-de-title:hover {
   color: gray;
@@ -386,7 +386,7 @@ html::selection {
 .acerca-de-texto {
   max-inline-size: 100%;
   line-height: 1.3;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: white;
   text-align: justify;
 }
