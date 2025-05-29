@@ -249,9 +249,9 @@ class ImageSlider {
   }
 
   _renderSlides(images) {
-    this.spinner.classList.remove('hidden');
+    // this.spinner.classList.remove('hidden');
     this.container.innerHTML = '';
-    this.container.appendChild(this.spinner);
+    // this.container.appendChild(this.spinner);
 
     this.currentSlide;
     this.currentImages = images;
@@ -288,7 +288,7 @@ class ImageSlider {
           const img = entry.target;
           img.src = img.dataset.src;
           img.onload = () => {
-            this.spinner.classList.add('hidden');
+            // this.spinner.classList.add('hidden');
             img.classList.remove('lazy-img');
           };
           observer.unobserve(img);
@@ -352,7 +352,7 @@ class ImageSlider {
 }
 const slider = new ImageSlider({
   containerSelector: '.slides-container',
-  spinnerSelector: '.spinner',
+  // spinnerSelector: '.spinner',
   buttonsSelector: '.btn-image-slide',
   btnLeftSelector: '.slider__btn--left',
   btnRightSelector: '.slider__btn--right',
